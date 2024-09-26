@@ -18,10 +18,10 @@ def get_conversation_id():
 
     # 替换app_id和Authorization为自己的ID和秘钥
     payload = json.dumps({
-        'app_id': "e6a11028-4a4c-4c4f-a7c6-64bdee6191d3"
+        'app_id': "appbuilder内创建的应用的应用ID"
     })
     headers = {
-        'Authorization': "Bearer bce-v3/ALTAK-40xNAwxgBkFXqeU3b67TV/80bb537686f21a1756e0db2d9bdd5fa868e56566",
+        'Authorization': "Bearer 秘钥",
         'Content-Type': 'application/json'
     }
 
@@ -67,13 +67,13 @@ def main():
     url = "https://qianfan.baidubce.com/v2/app/conversation/runs"
     # 替换app_id和Authorization为自己的ID和秘钥
     payload = json.dumps({
-        'app_id': "e6a11028-4a4c-4c4f-a7c6-64bdee6191d3",
+        'app_id': "appbuilder内创建的应用的应用ID",
         'query': "你好",
         'stream': True,
         'conversation_id': conversation_id
     })
     headers = {
-        'Authorization': "Bearer bce-v3/ALTAK-40xNAwxgBkFXqeU3b67TV/80bb537686f21a1756e0db2d9bdd5fa868e56566",
+        'Authorization': "Bearer 秘钥",
         'Content-Type': 'application/json'
     }
     
@@ -83,7 +83,7 @@ def main():
     while True:
         user_content = input("\n请输入: ")
         payload = json.dumps({
-            'app_id': "e6a11028-4a4c-4c4f-a7c6-64bdee6191d3",
+            'app_id': "appbuilder内创建的应用的应用ID",
             'query': user_content,
             'stream': True,
             'conversation_id': conversation_id
