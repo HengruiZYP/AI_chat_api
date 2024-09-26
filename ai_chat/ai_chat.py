@@ -81,7 +81,7 @@ def main():
     process_stream_response(response)
 
     while True:
-        user_content = input("请输入: ")
+        user_content = input("\n请输入: ")
         payload = json.dumps({
             'app_id': "e6a11028-4a4c-4c4f-a7c6-64bdee6191d3",
             'query': user_content,
@@ -90,6 +90,7 @@ def main():
         })
         response = requests.request("POST", url, headers=headers, data=payload, stream=True)
         process_stream_response(response)
+
 
 if __name__ == '__main__':
     main()
